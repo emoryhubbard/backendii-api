@@ -1,14 +1,20 @@
 const express = require('express');
-const app = express();
-const mainController = require('./controllers/main');
+const bodyParser = require('body-parser');
+const routes = require('./routes');
 
-app.use('/', require('./routes'));
+const app = express();
+app.use(bodyParser.json());
+app.use(setHeader);
+app.use('/', routes);
 
 const port = 3000;
+app.listen(port);
+console.log('Web server is listening at port ' + port);
 
-app.listen(process.env.port || port);
-console.log('Web server is listening at port ' + (process.env.port || port));
-
+function setHeader(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+}
 
 /* Before refactoring for routes:
 const express = require('express');

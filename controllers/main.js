@@ -1,4 +1,4 @@
-const jonathanRoute = (req, res) => {
+async function jonathanRoute(req, res) {
     res.send('Jonathan Soriano');
 };
 
