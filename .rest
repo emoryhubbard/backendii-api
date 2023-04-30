@@ -1,0 +1,20 @@
+// localhost testing
+
+###
+GET http://localhost:3000/
+###
+GET http://localhost:3000/contacts/oneContact?id=644c519e9b4a6d0ff7ca7661
+###
+GET http://localhost:3000/contacts/allContacts
+
+// production testing
+
+###
+GET https://backendii-api.onrender.com/
+###
+GET https://backendii-api.onrender.com/contacts/oneContact?id=644c519e9b4a6d0ff7ca7661
+###
+GET https://backendii-api.onrender.com/contacts/allContacts
+
+
+
