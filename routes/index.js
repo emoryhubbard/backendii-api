@@ -3,7 +3,7 @@ const router = express.Router();
 const mainController = require('../controllers/main');
 const contactsController = require('../controllers/contacts')
 
-router.get('/', contactsController.allContactsRoute);
+router.get('/', mainController.jonathanRoute);
 router.get('/contacts/allContacts', contactsController.allContactsRoute);
 router.get('/contacts/oneContact', contactsController.oneContactRoute);
 
