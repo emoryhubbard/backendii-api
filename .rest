@@ -7,6 +7,33 @@ GET http://localhost:3000/contacts/oneContact?id=644c519e9b4a6d0ff7ca7661
 ###
 GET http://localhost:3000/contacts/allContacts
 
+###
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Alexandra",
+    "lastName": "Hubbard",
+    "email": "emailForBrookus@gmail.com",
+    "favoriteColor": "purple",
+    "birthday": "01-07-2003"
+}
+
+###
+PUT http://localhost:3000/contacts?id=644c519e9b4a6d0ff7ca7661 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Amanda Dawn",
+    "lastName": "Hubbard",
+    "email": "koap@gmailcom",
+    "favoriteColor": "red",
+    "birthday": "11-07-1994"
+}
+
+###
+DELETE http://localhost:3000/contacts?id=645727b70dd4ce22fba6bae7 HTTP/1.1
+
 // production testing
 
 ###
@@ -16,5 +43,31 @@ GET https://backendii-api.onrender.com/contacts/oneContact?id=644c519e9b4a6d0ff7
 ###
 GET https://backendii-api.onrender.com/contacts/allContacts
 
+###
+POST https://backendii-api.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Alexandra",
+    "lastName": "Hubbard",
+    "email": "emailForBrookus@gmail.com",
+    "favoriteColor": "purple",
+    "birthday": "01-07-2003"
+}
+
+###
+PUT https://backendii-api.onrender.com/contacts?id=644c519e9b4a6d0ff7ca7661 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Amanda Dawn",
+    "lastName": "Hubbard",
+    "email": "koap@gmailcom",
+    "favoriteColor": "red",
+    "birthday": "11-07-1994"
+}
+
+###
+DELETE https://backendii-api.onrender.com/contacts?id=645727b70dd4ce22fba6bae7 HTTP/1.1
 
 
